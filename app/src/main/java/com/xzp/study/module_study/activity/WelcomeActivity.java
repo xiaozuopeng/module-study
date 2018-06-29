@@ -3,16 +3,16 @@ package com.xzp.study.module_study.activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.xzp.study.base.base.BaseActivity;
 import com.xzp.study.base.router.RouterConfig;
 import com.xzp.study.base.utils.CommonUtils;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
 
-public class WelcomeActivity extends BaseActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private View view;
 
@@ -37,9 +37,8 @@ public class WelcomeActivity extends BaseActivity {
 
     private void goToMain() {
         new Handler().postDelayed(() -> {
-//            startActivity(new Intent(WelcomeActivity.this, GuideActivity.class));
             ARouter.getInstance().build(RouterConfig.GUIDE_1).navigation();
             finish();
-        }, 3000);
+        }, 2000);
     }
 }

@@ -9,7 +9,7 @@ public class CommonUtils {
 
     /**
      * 跳转到设置界面
-     * @param context
+     * @param context 上下文
      */
     public static void goToSetting(Context context){
         Intent intent = new Intent();
